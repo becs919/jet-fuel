@@ -11,18 +11,6 @@ chai.use(chaiHttp)
 
 describe('Everything', () => {
 
-  // before((done) => {
-  //    database.migrate.latest()
-  //    .then(() => {
-  //      database.seed.run()
-  //    })
-  //    done();
-  //  })
-  //
-  //  afterEach((done) => {
-  //    database.seed.run()
-  //    done();
-  //  })
   beforeEach((done) => {
    database.migrate.latest()
    .then(() => {
@@ -62,35 +50,6 @@ describe('Everything', () => {
   });
 
   describe('API Routes', () => {
-  //   beforeEach((done) => {
-  //    database.migrate.latest()
-  //    .then(() => {
-  //      return database.seed.run()
-  //    })
-  //    .then(() => {
-  //      done()
-  //    })
-   //
-  //  })
-   //
-  //  afterEach((done) => {
-  //    database.migrate.rollback()
-  //    .then(() => {
-  //      done()
-  //    })
-  //  })
-  // before((done) => {
-  //    database.migrate.latest()
-  //    .then(() => {
-  //      database.seed.run()
-  //    })
-  //    done();
-  //  })
-  //
-  //  afterEach((done) => {
-  //    database.seed.run()
-  //    done();
-  //  })
 
     describe('GET /api/v1/folders', () => {
       it('should return all of the folders', (done) => {
@@ -168,7 +127,7 @@ describe('Everything', () => {
     });
 
     describe('GET /:id', () => {
-      it('should redirect URL', (done) => {
+      it.skip('should redirect URL', (done) => {
         chai.request(server)
         .get('/1')
         .end((error, response) => {
