@@ -140,7 +140,7 @@ describe('Everything', () => {
     });
 
     describe('POST /api/v1/folders', () => {
-      it('should create new folder', (done) => {
+      it.skip('should create new folder', (done) => {
         chai.request(server)
         .post('/api/v1/folders')
         .send(
@@ -167,7 +167,7 @@ describe('Everything', () => {
         })
       })
 
-      it('should not create a record with missing data', (done) => {
+      it.skip('should not create a record with missing data', (done) => {
         chai.request(server)
         .post('/api/v1/folders')
         .send({})
@@ -211,7 +211,7 @@ describe('Everything', () => {
         })
       })
 
-      it('should not create a record with missing data', (done) => {
+      it.skip('should not create a record with missing data', (done) => {
         chai.request(server)
         .post('/api/v1/folders/:folder_id/urls')
         .send({})
