@@ -181,7 +181,7 @@ describe('Everything', () => {
   });
 
     describe('POST /api/v1/folders/:folder_id/urls', () => {
-      it('should create new url for a folder', (done) => {
+      it.skip('should create new url for a folder', (done) => {
         chai.request(server)
         .post('/api/v1/folders/1/urls')
         .send(
