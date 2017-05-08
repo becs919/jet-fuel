@@ -22,7 +22,7 @@ describe('Everything', () => {
  })
 
  afterEach((done) => {
-   database.migrate.rollback()
+   database.seed.run()
    .then(() => {
      done()
    })
